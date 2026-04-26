@@ -1,0 +1,17 @@
+../Core/Src/ui_fsm.c:33:6:UI_Init	0	static
+../Core/Src/ui_fsm.c:41:6:UI_ChangeState	0	static
+../Core/Src/ui_fsm.c:55:6:Toggle_Play_Pause	8	static
+../Core/Src/ui_fsm.c:70:6:UI_Draw_Logo	8	static
+../Core/Src/ui_fsm.c:79:6:UI_Update_Menu_Focus	8	static
+../Core/Src/ui_fsm.c:89:6:UI_Draw_Menu	16	static
+../Core/Src/ui_fsm.c:119:6:UI_Update_Set_Choose_Focus	16	static
+../Core/Src/ui_fsm.c:129:6:UI_Draw_Set_Choose	24	static
+../Core/Src/ui_fsm.c:164:6:UI_Update_Demo_Buttons_State	16	static
+../Core/Src/ui_fsm.c:178:6:UI_Update_Chord_Demo_Focus	16	static
+../Core/Src/ui_fsm.c:188:6:UI_Update_Chord_Label	8	static
+../Core/Src/ui_fsm.c:196:6:UI_Show_Evaluation_Result	16	static
+../Core/Src/ui_fsm.c:225:6:UI_Hide_Evaluation_Result	8	static
+../Core/Src/ui_fsm.c:232:6:UI_Draw_Demo	24	static
+../Core/Src/ui_fsm.c:313:6:UI_Draw_Undone_Cursor	32	static
+../Core/Src/ui_fsm.c:318:6:UI_Draw_Undone	32	static
+../Core/Src/ui_fsm.c:331:6:UI_Process	40	static

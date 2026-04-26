@@ -1,0 +1,5 @@
+../Core/LVGL/src/draw/sw/lv_draw_sw_gradient.c:239:6:lv_gradient_free_cache	8	static
+../Core/LVGL/src/draw/sw/lv_draw_sw_gradient.c:246:6:lv_gradient_set_cache_size	16	static
+../Core/LVGL/src/draw/sw/lv_draw_sw_gradient.c:300:39:lv_gradient_calculate	16	static
+../Core/LVGL/src/draw/sw/lv_draw_sw_gradient.c:255:13:lv_gradient_get	64	static
+../Core/LVGL/src/draw/sw/lv_draw_sw_gradient.c:345:6:lv_gradient_cleanup	0	static

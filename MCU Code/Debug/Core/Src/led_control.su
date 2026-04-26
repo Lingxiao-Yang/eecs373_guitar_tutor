@@ -1,0 +1,7 @@
+../Core/Src/led_control.c:10:13:set_pixel_raw	32	static
+../Core/Src/led_control.c:20:6:DotStar_InitBuffer	8	static
+../Core/Src/led_control.c:25:6:DotStar_ClearAll	16	static
+../Core/Src/led_control.c:31:6:DotStar_DrawSafeMeteor	40	static
+../Core/Src/led_control.c:41:6:DotStar_Update	8	static
+../Core/Src/led_control.c:45:6:DotStar_Generate	16	static
+../Core/Src/led_control.c:58:6:SetPixelColor	24	static

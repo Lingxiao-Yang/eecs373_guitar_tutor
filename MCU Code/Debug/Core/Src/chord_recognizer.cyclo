@@ -1,0 +1,17 @@
+../Core/Src/chord_recognizer.c:297:18:hann_window	1
+../Core/Src/chord_recognizer.c:302:18:highpass_1pole	1
+../Core/Src/chord_recognizer.c:310:18:lowpass_1pole	1
+../Core/Src/chord_recognizer.c:317:13:reset_filter_state	1
+../Core/Src/chord_recognizer.c:324:20:nearest_note_name	3
+../Core/Src/chord_recognizer.c:340:14:abs_cents_error	4
+../Core/Src/chord_recognizer.c:347:14:quality_from_cents	2
+../Core/Src/chord_recognizer.c:353:14:best_match_quality_to_target	5
+../Core/Src/chord_recognizer.c:370:13:preprocess_and_fft	7
+../Core/Src/chord_recognizer.c:428:14:estimate_dominant_frequency	6
+../Core/Src/chord_recognizer.c:462:12:is_far_enough_from_existing_peak	3
+../Core/Src/chord_recognizer.c:475:12:extract_top_peaks	15
+../Core/Src/chord_recognizer.c:538:14:score_chord_against_peaks	22
+../Core/Src/chord_recognizer.c:633:18:recognize_from_peaks	7
+../Core/Src/chord_recognizer.c:672:6:chord_recognizer_audio_init	2
+../Core/Src/chord_recognizer.c:683:11:recognize_chord_from_audio	9
+../Core/Src/chord_recognizer.c:772:5:evaluate_current_chord_score	8

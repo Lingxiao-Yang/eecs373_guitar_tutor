@@ -1,0 +1,1 @@
+GEN_CSRCS += lv_font_ArchitectsDaughter_30.c lv_font_ArchitectsDaughter_18.c lv_font_ArchitectsDaughter_22.c lv_font_ArchitectsDaughter_16.c lv_font_ArchitectsDaughter_20.c lv_font_ArchitectsDaughter_26.c lv_font_montserratMedium_16.c lv_font_montserratMedium_20.c lv_font_montserratMedium_24.c lv_font_montserratMedium_22.c

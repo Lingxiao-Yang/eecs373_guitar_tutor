@@ -1,0 +1,4 @@
+../Core/Src/audio_manager.c:52:13:audio_monitor_timer_cb	3
+../Core/Src/audio_manager.c:70:6:Audio_Manager_Init	1
+../Core/Src/audio_manager.c:85:6:Audio_Play_Chord	3
+../Core/Src/audio_manager.c:102:6:Audio_Stop	1

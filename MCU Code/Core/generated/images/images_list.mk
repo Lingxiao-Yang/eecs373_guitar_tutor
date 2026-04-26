@@ -1,0 +1,1 @@
+GEN_CSRCS += _guitar_sized_alpha_480x320.c _Good_alpha_100x100.c _Awful_alpha_100x100.c _Awesome_alpha_100x100.c

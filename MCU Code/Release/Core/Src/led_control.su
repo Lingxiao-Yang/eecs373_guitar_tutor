@@ -1,0 +1,7 @@
+../Core/Src/led_control.c:20:6:DotStar_InitBuffer	0	static
+../Core/Src/led_control.c:29:6:DotStar_ClearAll	0	static
+../Core/Src/led_control.c:35:6:DotStar_Update	0	static
+../Core/Src/led_control.c:43:6:HAL_TIM_PWM_PulseFinishedCallback	8	static
+../Core/Src/led_control.c:49:6:SetPixelColor	8	static
+../Core/Src/led_control.c:54:6:DotStar_DrawSafeMeteor	36	static
+../Core/Src/led_control.c:64:6:DotStar_Generate	48	static

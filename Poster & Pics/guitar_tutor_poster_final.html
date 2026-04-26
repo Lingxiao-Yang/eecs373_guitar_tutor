@@ -1,0 +1,494 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.poster {
+  width: 100%; max-width: 660px; margin: 0 auto;
+  background: #fafaf9;
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  font-family: var(--font-sans);
+}
+.hdr {
+  background: #00274C;
+  padding: 0px 24px 9px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 18px;
+}
+.hdr-title { font-size: 35px; font-weight: 700; color: #FFCB05; letter-spacing: 0.0em; }
+.hdr-sub   { font-size: 10px; color: #D9E2F2; margin-top: 8px; letter-spacing: 0.03em; line-height: 1.7; max-width: 430px; text-transform: uppercase; }
+.hdr-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
+.hdr-logo  { width: 120px; height: auto; display: block; margin-bottom: 4px; }
+.hdr-course{ font-size: 9px; color: #D9E2F2; letter-spacing: 0.09em; text-transform: uppercase; }
+
+.row-a {
+  display: grid; grid-template-columns: 1.25fr 1fr;
+  border-top: 0.5px solid #e4e4e0; min-height: 160px;
+}
+.photo-main {
+  background: #EBEBEB;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0px;
+  border-right: 0.5px solid #e4e4e0; padding: 0px;
+}
+.ph-rect {
+  width: 300%; max-width: 300px; height: 200px;
+  background: #D3D1C7; border-radius: 6px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+}
+.ph-cap { font-size: 10px; color: #888780; text-align: center; line-height: 1.45; max-width: 200px; }
+.motiv {
+  padding: 16px 20px;
+  border-left: 3px solid #00274C;
+  display: flex; flex-direction: column; justify-content: center; gap: 8px;
+}
+.sec-tag { font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.tag-purple { color: #534AB7; } .tag-teal { color: #0F6E56; }
+.tag-amber  { color: #854F0B; } .tag-coral { color: #993C1D; }
+.motiv-pt { display: flex; align-items: flex-start; gap: 7px; font-size: 11px; color: var(--color-text-primary); line-height: 1.5; }
+.dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.dp { background: #7F77DD; } .dt { background: #1D9E75; }
+.da { background: #BA7517; } .dc { background: #D85A30; }
+
+/* ── ARCH ── */
+.arch {
+  border-top: 0.5px solid #e4e4e0;
+  border-left: 3px solid #00274C;
+  padding: 14px 20px 16px;
+}
+.arch-canvas {
+  margin-top: 12px;
+  width: 100%;
+  overflow: visible;
+}
+
+.row-c {
+  display: grid; grid-template-columns: 1fr 1.35fr;
+  border-top: 0.5px solid #e4e4e0;
+}
+.feat {
+  padding: 18px 22px;
+  border-right: 0.5px solid #e4e4e0;
+  border-left: 3px solid #00274C;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.feat-item { display: flex; align-items: flex-start; gap: 9px; }
+.ficon { width: 28px; height: 28px; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.fi-a { background: #FAEEDA; } .fi-t { background: #E1F5EE; }
+.fi-p { background: #EEEDFE; } .fi-g { background: #F1EFE8; } .fi-c { background: #FAECE7; }
+.feat-txt { font-size: 13px; color: var(--color-text-primary); line-height: 1.4; }
+.feat-sub { font-size: 11px; color: #888780; display: block; margin-top: 1px; }
+
+.gallery { padding: 14px 16px; border-left: 3px solid #00274C; display: flex; flex-direction: column; gap: 8px; }
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.screen-card {
+  background: #F1EFE8;
+  border-radius: 5px;
+  border: 0.5px solid #D3D1C7;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px;
+}
+.screen-ph {
+  width: 100%;
+  height: 90px;
+  background: #D3D1C7;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.audio-card {
+  min-height: 150px;
+}
+
+.audio-grid {
+  width: 100%;
+  height: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: #D3D1C7;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.audio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #F1EFE8;
+  border-radius: 2px;
+}
+
+.screen-name { font-size: 9px; color: #5F5E5A; font-weight: 500; text-align: center; }
+.screen-sub  { font-size: 8px; color: #888780; text-align: center; }
+
+.footer {
+  border-top: 0.5px solid #e4e4e0;
+  background: #F4F4F2;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-l {
+  font-size: 9px;
+  color: #888780;
+  letter-spacing: 0.04em;
+  white-space: normal;
+  flex: 1;
+}
+
+.chips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 240px;
+}
+
+.chip {
+  font-size: 8px;
+  padding: 2px 6px;
+  border-radius: 9px;
+  background: #EBEBEB;
+  color: #5F5E5A;
+  border: 0.5px solid #D3D1C7;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+</style>
+
+<div class="poster">
+
+  <!-- HEADER -->
+<div class="hdr">
+  <div>
+    <div class="hdr-title">Guitar Tutor</div>
+    <div style="font-size: 13px; color: #FFCB05; margin-top: 8px; letter-spacing: 0.03em; text-transform: uppercase;">EECS 373 &nbsp;·&nbsp; Introduction to Embedded Systems</div>
+    <div class="hdr-sub">
+      Xiaocan Shi &nbsp;·&nbsp; Xinyu Hu &nbsp;·&nbsp; Lingxiao Yang<br>
+      Wenlan Wu &nbsp;·&nbsp; Rui Jiang
+    </div>
+  </div>
+  <div class="hdr-right">
+    <img src="U-M_Logo-Hex.png" alt="University of Michigan logo" class="hdr-logo">
+    <!-- <div class="hdr-course">EECS 373 &nbsp;·&nbsp; University of Michigan</div> -->
+  </div>
+</div>
+
+  <!-- ROW A -->
+  <div class="row-a">
+    <div class="photo-main">
+      <img src="set.jpg" style="width: 100%; max-width: 300px; height: 200px; object-fit: fill; border-radius: 6px;">
+      <!-- <span style="font-size:10px;color:#5F5E5A;font-weight:500;">Overview photo</span> -->
+      <!-- <span class="ph-cap">Guitar + LED strip + PCB + display — best hardware shot</span> -->
+    </div>
+    <div class="motiv">
+      <div class="sec-tag tag-purple">Motivation</div>
+      <div class="motiv-pt"><div class="dot dp"></div><span>No visual guidance in traditional guitar learning</span></div>
+      <div class="motiv-pt"><div class="dot dp"></div><span>Chord shapes are hard to memorize without instant feedback</span></div>
+      <div class="motiv-pt"><div class="dot dp"></div><span>Existing tools are fixed to one instrument — not portable</span></div>
+    </div>
+  </div>
+
+<!-- ARCH SVG -->
+<div class="arch">
+  <div class="sec-tag tag-teal">System architecture</div>
+  <div class="arch-canvas">
+    <svg width="100%" viewBox="0 0 660 285" font-family="var(--font-sans)">
+      <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#000000"/>
+        </marker>
+      </defs>
+
+      <!-- LEFT EXTERNAL MODULES -->
+      <rect x="0" y="50" width="110" height="42" rx="5"
+            fill="#00274C" stroke="#333333" stroke-width="0.6"/>
+      <text x="55" y="67" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">Guitar Pickup</text>
+      <text x="55" y="81" text-anchor="middle" font-size="8.5"
+            fill="#aaaaaa">analog input</text>
+
+      <rect x="0" y="135" width="110" height="42" rx="5"
+            fill="#00274C" stroke="#333333" stroke-width="0.6"/>
+      <text x="55" y="152" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">4×4 Keypad</text>
+      <text x="55" y="166" text-anchor="middle" font-size="8.5"
+            fill="#aaaaaa">user input</text>
+
+      <rect x="0" y="220" width="110" height="42" rx="5"
+            fill="#00274C" stroke="#333333" stroke-width="0.6"/>
+      <text x="55" y="237" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">5V Battery</text>
+      <text x="55" y="251" text-anchor="middle" font-size="8.5"
+            fill="#aaaaaa">power supply</text>
+
+      <!-- CUSTOM PCB -->
+      <rect x="155" y="1" width="390" height="268" rx="8"
+            fill="none" stroke="#0F6E56" stroke-width="2"/>
+
+      <text x="350" y="19" text-anchor="middle" font-size="14"
+            font-weight="500" fill="#0F6E56">Custom PCB</text>
+      <text x="350" y="31" text-anchor="middle" font-size="8.5"
+            fill="#0F6E56">routes signals and 5V power between modules and STM32</text>
+
+      <!-- PCB INTERFACE BLOCKS -->
+      <rect x="175" y="57" width="105" height="28" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <!-- <text x="65" y="67" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">Guitar Pickup</text> -->
+      <text x="227.5" y="74" text-anchor="middle" font-size="8.5"
+            font-weight="500" fill="#ffffff">Amplifier + Filter</text>
+
+      <rect x="175" y="141" width="105" height="28" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="227.5" y="159" text-anchor="middle" font-size="8.5"
+            font-weight="500" fill="#ffffff">Keypad Header</text>
+
+      <rect x="175" y="226" width="105" height="28" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="227.5" y="244" text-anchor="middle" font-size="8.5"
+            font-weight="500" fill="#ffffff">5V Power Rail</text>
+
+      <!-- STM32 NUCLEO INSIDE PCB -->
+      <rect x="312" y="40" width="218" height="220" rx="6"
+            fill="none" stroke="#0F6E56" stroke-width="1.5"/>
+            <!-- fill="none" stroke="#000000" stroke-width="1"/> -->
+      <text x="421" y="55" text-anchor="middle" font-size="10.5"
+            font-weight="500" fill="#0F6E56">STM32 Nucleo</text>
+
+      <!-- STM32 INTERNAL BLOCKS -->
+      <rect x="330" y="61" width="82" height="22" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="371" y="75.5" text-anchor="middle" font-size="8"
+            fill="#ffffff">ADC</text>
+
+      <rect x="330" y="146" width="82" height="22" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="371" y="160.5" text-anchor="middle" font-size="8"
+            fill="#ffffff">GPIO</text>
+
+      <rect x="422" y="61" width="96" height="22" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="470" y="75.5" text-anchor="middle" font-size="7.6"
+            fill="#ffffff">SPI + GPIO</text>
+
+      <rect x="422" y="146" width="96" height="22" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="470" y="160.5" text-anchor="middle" font-size="7.1"
+            fill="#ffffff">TIM + DMA + GPIO</text>
+
+      <rect x="422" y="191" width="96" height="22" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="470" y="205.5" text-anchor="middle" font-size="7.1"
+            fill="#ffffff">TIM + DMA + DAC</text>
+
+      <rect x="330" y="231" width="188" height="18" rx="3"
+            fill="#00274C" stroke="#333333" stroke-width="0.4"/>
+      <text x="424" y="242.5" text-anchor="middle" font-size="7.8"
+            fill="#ffffff">FFT · Chord LUT · FSM</text>
+
+      <!-- RIGHT EXTERNAL MODULES -->
+      <rect x="563" y="50" width="90" height="42" rx="5"
+            fill="#00274C" stroke="#333333" stroke-width="0.6"/>
+      <text x="608" y="67" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">Display</text>
+      <text x="608" y="81" text-anchor="middle" font-size="8.5"
+            fill="#aaaaaa">screen</text>
+
+      <rect x="563" y="135" width="90" height="42" rx="5"
+            fill="#00274C" stroke="#333333" stroke-width="0.6"/>
+      <text x="608" y="152" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">WS2813 LEDs</text>
+      <text x="608" y="166" text-anchor="middle" font-size="8.5"
+            fill="#aaaaaa">LED strip</text>
+
+      <rect x="563" y="220" width="90" height="42" rx="5"
+            fill="#00274C" stroke="#333333" stroke-width="0.6"/>
+      <text x="608" y="237" text-anchor="middle" font-size="10"
+            font-weight="500" fill="#ffffff">Speaker</text>
+      <text x="608" y="251" text-anchor="middle" font-size="8.5"
+            fill="#aaaaaa">built-in amp</text>
+
+      <!-- LEFT MODULES TO PCB -->
+      <line x1="100" y1="71" x2="175" y2="71"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="142.5" y="54" text-anchor="middle" font-size="9"
+            fill="#000000">Pickup signal</text> -->
+
+      <line x1="100" y1="156" x2="175" y2="156"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="142.5" y="139" text-anchor="middle" font-size="9"
+            fill="#000000">Row/Col GPIO</text> -->
+
+      <line x1="100" y1="241" x2="175" y2="241"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="142.5" y="224" text-anchor="middle" font-size="9"
+            fill="#000000">5V power</text> -->
+
+      <!-- PCB INTERFACE TO STM32 -->
+      <line x1="280" y1="72" x2="330" y2="72"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="305" y="54" text-anchor="middle" font-size="9"
+            fill="#000000">AFE output</text> -->
+
+      <line x1="280" y1="157" x2="330" y2="157"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="305" y="139" text-anchor="middle" font-size="9"
+            fill="#000000">Keypad GPIO</text> -->
+
+      <!-- <line x1="280" y1="240" x2="330" y2="240"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/> -->
+      <!-- <text x="305" y="223" text-anchor="middle" font-size="9"
+            fill="#000000">5V power</text> -->
+
+      <!-- STM32 TO RIGHT MODULES THROUGH PCB -->
+      <line x1="518" y1="71" x2="563" y2="71"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="516" y="54" text-anchor="start" font-size="9"
+            fill="#000000">Display SPI</text> -->
+
+      <line x1="518" y1="156" x2="563" y2="156"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="535.5" y="139" text-anchor="middle" font-size="9"
+            fill="#000000">LED data</text> -->
+
+      <line x1="518" y1="202" x2="540" y2="202"
+            stroke="#000000" stroke-width="2.2"/>
+      <line x1="540" y1="202" x2="540" y2="241"
+            stroke="#000000" stroke-width="2.2"/>
+      <line x1="540" y1="241" x2="563" y2="241"
+            stroke="#000000" stroke-width="2.2" marker-end="url(#arr)"/>
+      <!-- <text x="523" y="195" text-anchor="start" font-size="9"
+            fill="#000000">DAC audio</text> -->
+
+      <!-- BOTTOM NOTE -->
+      <text x="330" y="280" text-anchor="middle" font-size="9.5"
+            fill="#000000">
+        External modules connect through the custom PCB; STM32 peripherals drive each signal path.
+      </text>
+    </svg>
+  </div>
+
+  <div style="font-size:10px;color:#000000;line-height:1.55;margin-top:14px;">
+    The guitar pickup signal is conditioned by the amplifier/filter AFE before entering the STM32 ADC.
+    The keypad uses row/column GPIO scan lines. The display uses SPI, the WS2813 LEDs use a timed LED data signal,
+    and the speaker receives DAC audio output through its built-in amplifier.
+  </div>
+</div>
+
+  <!-- ROW C -->
+  <div class="row-c">
+    <div class="feat">
+      <div class="sec-tag tag-amber">Key features</div>
+      <div class="feat-item">
+        <div class="ficon fi-a">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4" stroke="#BA7517" stroke-width="1.1"/><circle cx="6" cy="6" r="1.8" fill="#BA7517"/></svg>
+        </div>
+        <div class="feat-txt">LED chord projection<span class="feat-sub">Addressable RGB per fret + string</span></div>
+      </div>
+      <div class="feat-item">
+        <div class="ficon fi-t">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polyline points="1,9 3.5,5 6,7 8.5,3 11,5" stroke="#1D9E75" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="feat-txt">512-pt FFT verification<span class="feat-sub">Detects chord from mic, confirms accuracy</span></div>
+      </div>
+      <div class="feat-item">
+        <div class="ficon fi-p">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2" width="10" height="7.5" rx="1.5" stroke="#7F77DD" stroke-width="1.1"/><line x1="3" y1="5" x2="9" y2="5" stroke="#7F77DD" stroke-width="0.9" stroke-linecap="round"/><line x1="3" y1="7" x2="7" y2="7" stroke="#AFA9EC" stroke-width="0.9" stroke-linecap="round"/></svg>
+        </div>
+        <div class="feat-txt">320×480 TFT display<span class="feat-sub">Chord name, dot positions, progression</span></div>
+      </div>
+      <div class="feat-item">
+        <div class="ficon fi-g">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4" stroke="#888780" stroke-width="1.1"/><polyline points="6,3 6,6 8,7.5" stroke="#888780" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="feat-txt">Training mode FSM<span class="feat-sub">Auto-cycles via timed interrupt</span></div>
+      </div>
+      <div class="feat-item">
+        <div class="ficon fi-c">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1.5" y="3" width="9" height="6" rx="1.5" stroke="#D85A30" stroke-width="1.1"/><circle cx="3.5" cy="6" r="0.9" fill="#D85A30"/><circle cx="6" cy="6" r="0.9" fill="#EF9F27"/><circle cx="8.5" cy="6" r="0.9" fill="#1D9E75"/></svg>
+        </div>
+        <div class="feat-txt">Portable demo board<span class="feat-sub">Standalone — no guitar needed</span></div>
+      </div>
+    </div>
+
+ <div class="gallery">
+  <div class="sec-tag tag-coral">Display screens</div>
+
+  <div class="gallery-grid">
+    <div class="screen-card">
+      <div class="screen-ph">
+        <img src="Chord view.png" alt="Chord view screen" class="screen-img">
+      </div>
+      <div class="screen-name">Chord view</div>
+      <div class="screen-sub">Fret dot positions</div>
+    </div>
+
+    <div class="screen-card">
+      <div class="screen-ph">
+        <img src="mode_select_new.png" alt="Progression screen" class="screen-img">
+      </div>
+      <div class="screen-name">Mode select</div>
+      <div class="screen-sub">Manual menu</div>
+    </div>
+
+  <div class="screen-card audio-card">
+  <div class="audio-grid">
+    <img src="feedback1.png" alt="Audio feedback 1" class="audio-img">
+    <img src="feedback2.png" alt="Audio feedback 2" class="audio-img">
+    <img src="feedback3.png" alt="Audio feedback 3" class="audio-img">
+    <img src="feedback4.png" alt="Audio feedback 4" class="audio-img">
+  </div>
+  <div class="screen-name">Audio Process</div>
+  <div class="screen-sub">FFT Spectrum</div>
+  </div>
+
+  <div class="screen-card">
+      <div class="screen-ph">
+        <img src="test_feedback.jpg" alt="Progression screen" class="screen-img">
+      </div>
+      <div class="screen-name">Test Feedback</div>
+      <div class="screen-sub">Pass / fail result</div>
+    </div>
+
+</div>
+</div>
+</div>
+
+  <!-- FOOTER -->
+<div class="footer">
+  <div class="footer-l">EECS 373 &nbsp;·&nbsp; University of Michigan &nbsp;·&nbsp; 2026</div>
+  <div class="chips">
+    <div class="chip">STM32</div>
+    <div class="chip">PCB</div>
+    <div class="chip">WS2813</div>
+    <div class="chip">TFT Display</div>
+    <div class="chip">Keypad</div>
+    <div class="chip">Speaker</div>
+  </div>
+</div>
+
+</div>

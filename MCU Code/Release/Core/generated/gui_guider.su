@@ -1,0 +1,6 @@
+../Core/generated/gui_guider.c:19:6:ui_init_style	0	static
+../Core/generated/gui_guider.c:27:6:ui_load_scr_animation	40	static
+../Core/generated/gui_guider.c:47:6:ui_animation	112	static
+../Core/generated/gui_guider.c:75:6:init_scr_del_flag	0	static
+../Core/generated/gui_guider.c:84:6:setup_ui	8	static
+../Core/generated/gui_guider.c:92:6:init_keyboard	0	static

@@ -1,0 +1,4 @@
+C:/Users/syoshino/Desktop/guitar_tutor_2.1.1_backup/Core/LVGL/src/lv_api_map.h:54:20:lv_obj_move_foreground	24	static
+C:/Users/syoshino/Desktop/guitar_tutor_2.1.1_backup/Core/LVGL/src/lv_api_map.h:66:20:lv_obj_move_background	16	static
+../Core/generated/widgets_init.c:17:30:kb_event_cb	24	static
+../Core/generated/widgets_init.c:25:30:ta_event_cb	32	static

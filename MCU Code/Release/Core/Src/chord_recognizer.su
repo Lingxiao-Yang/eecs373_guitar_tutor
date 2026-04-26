@@ -1,0 +1,4 @@
+../Core/Src/chord_recognizer.c:538:14:score_chord_against_peaks.constprop	128	static
+../Core/Src/chord_recognizer.c:672:6:chord_recognizer_audio_init	8	static
+../Core/Src/chord_recognizer.c:683:11:recognize_chord_from_audio	144	static
+../Core/Src/chord_recognizer.c:772:5:evaluate_current_chord_score	8	static
