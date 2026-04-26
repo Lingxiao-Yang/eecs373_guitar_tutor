@@ -7,7 +7,7 @@ practice and feedback workflows.
 
 ## Project poster
 
-- [Poster & Pics/poster_inPDF.pdf](Poster%20%26%20Pics/poster_inPDF.pdf)
+![EECS 373 Guitar Tutor Poster](Poster%20%26%20Pics/poster_inPDF.jpg)
 
 ## Folder overview
 
