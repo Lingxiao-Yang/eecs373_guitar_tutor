@@ -7,10 +7,6 @@ practice and feedback workflows.
 
 ## Project poster
 
-<iframe src="Poster%20%26%20Pics/guitar_tutor_poster_final.html" width="100%" height="900" title="EECS 373 Guitar Tutor Poster"></iframe>
-
-
-- [Poster & Pics/guitar_tutor_poster_final.html](Poster%20%26%20Pics/guitar_tutor_poster_final.html)
 - [Poster & Pics/poster_inPDF.pdf](Poster%20%26%20Pics/poster_inPDF.pdf)
 
 ## Folder overview
